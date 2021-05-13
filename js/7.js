@@ -1,26 +1,19 @@
-function StringBuilder(baseValue) {
-  this.value = baseValue;
+// Пиши код ниже этой строки
+const filterArray=(numbers, value)=> {
+    const filteredNumbers = [];
+  
+    numbers.forEach((number) =>{
+      if (number > value) {
+        filteredNumbers.push(number);
+      }
+    });
+  
+    // Пиши код выше этой строки
+    return filteredNumbers;
 }
-
-StringBuilder.prototype.getValue = function () {
-  return this.value;
-}
-StringBuilder.prototype.padEnd = function (str) {
-  this.value += str;
-}
-StringBuilder.prototype.padStart = function (str) {
-   this.value = str + this.value;
-}
-StringBuilder.prototype.padBoth = function (str) {
-  this.value = str + this.value + str;
-}
-
-// Пиши код выше этой строки
-const builder = new StringBuilder('.');
-console.log(builder.getValue()); // '.'
-builder.padStart('^');
-console.log(builder.getValue()); // '^.'
-builder.padEnd('^');
-console.log(builder.getValue()); // '^.^'
-builder.padBoth('=');
-console.log(builder.getValue()); // '=^.^='
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+console.log(filterArray([1, 2, 3, 4, 5], 4));
+console.log(filterArray([1, 2, 3, 4, 5], 5));
+console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log(filterArray([12, 24, 8, 41, 76], 20));
+console.log(filterArray([2, 4, 8, 1, 76], 20));

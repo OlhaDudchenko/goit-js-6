@@ -1,28 +1,21 @@
-class Storage{
-  #items;
-  constructor(items) {
-  this.#items = items;
-}
-
-getItems() {
-  return this.#items;
-}
-
-addItem(newItem) {
-  this.#items.push(newItem);
-}
-
-removeItem(item) {
-  const itemIndex = this.#items.indexOf(item);
-  this.#items.splice(itemIndex, 1);
-}
-};
-
-
-// Пиши код выше этой строки
-const storage = new Storage(["Нанитоиды", "Пролонгер", "Антигравитатор"]);
-console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
-storage.addItem("Дроид");
-console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор", "Дроид"]
-storage.removeItem("Пролонгер");
-console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Дроид"]
+const books = [
+    {
+      title: 'Последнее королевство',
+      author: 'Бернард Корнуэлл',
+      genres: ['приключения', 'историческое']
+    },
+    {
+      title: 'На берегу спокойных вод',
+      author: 'Роберт Шекли',
+      genres: ['фантастика']
+    },
+    {
+      title: 'Красна как кровь',
+      author: 'Ли Танит',
+      genres: ['ужасы', 'мистика']
+    }
+  ];
+  // Пиши код ниже этой строки
+  
+const genres = books.flatMap(book=>book.genres);
+console.log(genres);

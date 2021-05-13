@@ -1,22 +1,13 @@
-function Storage(items) {
-  this.items = items;
-}
- 
-Storage.prototype.getItems = function () {
-  return this.items;
-}
+// Пиши код ниже этой строки
+const calculateTotalPrice=(orderedItems)=> {
+  let totalPrice = 0;
 
-Storage.prototype.addItem = function (newItem) {
-  this.items.push(newItem);
+  orderedItems.forEach((item)=> (totalPrice += item));
+
+  return totalPrice;
 }
- 
-Storage.prototype.removeItem = function (item) {
-  const removedItem = this.items.indexOf(item);
-  this.items.splice(removedItem,1);
-}
-const storage = new Storage(['Нанитоиды', 'Пролонгер', 'Антигравитатор']);
-console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
-storage.addItem('Дроид');
-console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор", "Дроид"]
-storage.removeItem('Пролонгер');
-console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Дроид"]
+// Пиши код выше этой строки
+console.log(calculateTotalPrice([12, 85, 37, 4]));
+console.log(calculateTotalPrice([164, 48, 291]));
+console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+console.log(calculateTotalPrice([2, 1, 4, 3, 6]));

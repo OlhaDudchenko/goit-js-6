@@ -1,26 +1,29 @@
-const parent = {
-  name: 'Stacey',
-  surname: 'Moore',
-  age: 54,
-  heritage: 'Irish'
-};
-// Пиши код ниже этой строки
-const child = Object.create(parent);
-// const child = {
-//   name: 'Jason',
-//   age = 27,
-// };
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  // Пиши код ниже этой строки
 
-// Пиши код выше этой строки
-child.name = 'Jason';
-child.age = 27;
-console.log(parent.hasOwnProperty('surname')); 
-console.log(parent.hasOwnProperty('heritage'));
-console.log(child.hasOwnProperty('name'));
-console.log(child.name);
-console.log(child.hasOwnProperty('age'));
-console.log(child.age);
-console.log(child.hasOwnProperty('surname'));
-console.log(child.surname);
-console.log(child.heritage);
-console.log(parent.isPrototypeOf(child));
+  orderedItems.forEach(function (item){
+    totalPrice += item;
+});
+  // Пиши код выше этой строки
+  return totalPrice;
+}
+
+
+console.log(calculateTotalPrice([12, 85, 37, 4]));
+console.log(calculateTotalPrice([164, 48, 291]));
+console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+console.log(calculateTotalPrice([400, 500]));
+
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// // Классический for
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(`Индекс ${i}, значение ${numbers[i]}`);
+// }
+
+// // Перебирающий forEach
+// numbers.forEach(function (number, index) {
+//   console.log(`Индекс ${index}, значение ${number}`);
+// });

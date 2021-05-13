@@ -1,12 +1,9 @@
-function Car({ brand, model, price }) {
-  this.brand = brand;
-  this.model = model;
-  this.price = price;
-}
+// Пиши код ниже этой строки
+const calculateTotalPrice = (quantity, pricePerItem) => 
+  quantity * pricePerItem;
 
-Car.prototype.getPrice = function () {
-  return this.price;
-};
-Car.prototype.changePrice = function (newPrice) {
-  return this.price=newPrice;
-}
+// Пиши код выше этой строки
+console.log(calculateTotalPrice(5, 100));
+console.log(calculateTotalPrice(8, 60));
+console.log(calculateTotalPrice(3, 400));
+console.log(calculateTotalPrice(3, 4));

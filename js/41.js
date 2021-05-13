@@ -1,90 +1,16 @@
-const atTheOldToad = {
-  potions: [
-    { name: 'Зелье скорости', price: 460 },
-    { name: 'Дыхание дракона', price: 780 },
-    { name: 'Каменная кожа', price: 520 },
-  ],
-  // Пиши код ниже этой строки
-  getPotions() {
-    return this.potions;
-  },
-  addPotion(potionName) {
-    if (this.potions.includes(potionName)) {
-      return `Зелье ${potionName} уже есть в инвентаре!`;
-    }
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 8.14 },
+  { title: 'Сны В Ведьмином Доме', author: 'Говард Лавкрафт', rating: 8.67 }
+];
+const MIN_BOOK_RATING = 8;
+// Пиши код ниже этой строки
 
-    this.potions.push(potionName);
-  },
-  removePotion(potionName) {
-    for (let i = 0; i < this.potions.length; i += 1) {
-      // console.log(this.potions[i]);
-      if (potionName === this.potions[i].name) {
-        console.log(potionName)
-        // console.log(potionName);
-        this.potions.splice(i, 1);
-      }
-    }
-
-    //    for (const potion of this.potions) {
-    //   //  console.log(potion.name);
-    //    if (potion.name === potionName) {
-    //       // potion.name = newName;
-    //      this.potions.splice(potion, 1);
-    //      }
-     
-    // }
-    return `Зелья ${potionName} нет в инвентаре!`;
-      
-
-
-    
-  },
-  updatePotionName(oldName, newName) {
-    //  for (let i = 0; i < this.potions.length; i += 1){
-    //            console.log(this.potions[i].name);
-    //           if (oldName === this.potions[i].name) {
-    //              console.log(this.potions[i].name);
-   
-    //             this.potions.splice(i, 1, {name: newName, price: this.potions[i].price});
-             
-    //  };
-   
-    //    };
-    //   return `Зелья ${oldName} нет в инвентаре!`;
-    
-    
-  //   for (const potion of this.potions) {
-  //     console.log(potion.name);
-  //     if (potion.name === oldName) {
-  //       potion.name = newName;
-  //      }
-     
-  //  }
-    
-  }
-
-
+const names = books.filter(book => book.rating > MIN_BOOK_RATING)
+  .map(book => book.author)
+  .sort((firstName, secondName) => firstName.localeCompare(secondName));
   
-    
-};
-// console.log(atTheOldToad);
-//  atTheOldToad.getPotions();
-//   console.log(atTheOldToad.getPotions());
-
-//   atTheOldToad.addPotion({ name: 'Невидимка', price: 620 });
-//   console.log(atTheOldToad.getPotions());
-
-//   atTheOldToad.addPotion({ name: 'Зелье силы', price: 270 });
-//   console.log(atTheOldToad.getPotions());
-
- atTheOldToad.removePotion('Дыхание дракона');
- console.log(atTheOldToad.getPotions());
-   
-atTheOldToad.removePotion('Зелье скорости');
-    console.log(atTheOldToad.getPotions());
-
-// console.log(atTheOldToad.updatePotionName('Дыхание дракона', 'Полиморф'));
-// console.log(atTheOldToad.getPotions());
- 
-// console.log(atTheOldToad.updatePotionName('Каменная кожа', 'Зелье неуязвимости'));
-// console.log(atTheOldToad.getPotions());
+console.log(names);
+console.log(books);

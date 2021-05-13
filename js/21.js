@@ -1,85 +1,81 @@
+const users=[
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male',
+    age: 37
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    gender: 'female',
+    age: 34
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    gender: 'male',
+    age: 24
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    gender: 'female',
+    age: 21
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    gender: 'male',
+    age: 27
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    gender: 'male',
+    age: 38
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    gender: 'female',
+    age: 39
+  }
+]
 
-const highTemperatures = {
-  yesterday: 28,
-  today: 26,
-  tomorrow: 33,
-};
 // Пиши код ниже этой строки
-
-const { yesterday,today,tomorrow } = highTemperatures;
-
+const getFriends = (users) => {
+  const allFriends = users.flatMap(user => user.friends);
+  const uniqueFriends = allFriends.filter((users, index, array) => array.indexOf(users) === index);
+  return uniqueFriends;
+};
 // Пиши код выше этой строки
-const meanTemperature = (yesterday + today + tomorrow) / 3;
-
-console.log(highTemperatures.yesterday);
-console.log(highTemperatures.today);
-console.log(highTemperatures.tomorrow);
-console.log(meanTemperature);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function findLongestWord(string) {
-//         const massFromString = string.split(' ');
-//     // console.log(massFromString);
-//         let longestWord = '';
-
-//         for ( const element of massFromString) {
-//             // console.log(element);
-
-//             if (element.length > longestWord.length) {
-//                 longestWord = element;
-//             }
-//         }
-
-//        return longestWord;
-
-
-// }
-
-
-// console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
-// console.log(findLongestWord('Google do a roll'));
-// console.log(findLongestWord('May the force be with you'));
-// console.log(findLongestWord('Find a cat'));
-
-
-
-//  ******************************************
-
-
-// const wordsMasiv = string.split(' ');
-    // let max = wordsMasiv[0];
-
-    // for (let i = 0; i < wordsMasiv.length; i += 1){
-
-    //     if (wordsMasiv[i].length > max.length) {
-    //         max = wordsMasiv[i];
-
-    //     }
-    // }
-
-    // return max;
+console.log(getFriends(users));

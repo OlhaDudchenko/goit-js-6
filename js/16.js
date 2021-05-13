@@ -1,21 +1,24 @@
-class Car {
-  static #MAX_PRICE = 50000;
-  // Пиши код ниже этой строки
-  static checkPrice(price) {
-   
-    if (price < Car.#MAX_PRICE) {
-      return 'Всё хорошо, цена в порядке.'
+const books = [
+    {
+      title: 'Последнее королевство',
+      author: 'Бернард Корнуэлл',
+      genres: ['приключения', 'историческое']
+    },
+    {
+      title: 'На берегу спокойных вод',
+      author: 'Роберт Шекли',
+      genres: ['фантастика', 'мистика']
+    },
+    {
+      title: 'Красна как кровь',
+      author: 'Ли Танит',
+      genres: ['ужасы', 'мистика', 'приключения']
     }
-    return 'Внимание! Цена превышает допустимую.';
-} 
-  // Пиши код выше этой строки
-  constructor({ price }) {
-    this.price = price;
-  }
-}
+  ];
+  // Пиши код ниже этой строки
+  const allGenres = books.flatMap(book=>book.genres);
+  const uniqueGenres = allGenres.filter( (books, index, array) =>array.indexOf(books) === index
+);
 
-const audi = new Car({ price: 36000 });
-const bmw = new Car({ price: 64000 });
-
-console.log(Car.checkPrice(audi.price)); // Всё хорошо, цена в порядке.
-console.log(Car.checkPrice(bmw.price)); // Внимание! Цена превышает допустимую.
+console.log(allGenres);
+console.log(uniqueGenres);

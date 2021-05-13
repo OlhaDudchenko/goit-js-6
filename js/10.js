@@ -1,18 +1,6 @@
-class Car {
-  constructor({ brand, model, price }) {
-    this.brand = brand;
-    this.model = model;
-    this.price = price;
-  }
-
-  getPrice(){
-  return this.price;
-  }
-  
-  
-  changePrice(newPrice){
-    this.price = newPrice;
-}
-}
+const planets = ['Земля', 'Марс', 'Венера', 'Юпитер'];
+// Пиши код ниже этой строки
+const planetsLengths = planets.map((planet) => planet.length);
 
 
+console.log(planetsLengths);

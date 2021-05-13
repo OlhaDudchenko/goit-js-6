@@ -1,20 +1,16 @@
-class User {
-  email;
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+  { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+];
 
-  constructor(email) {
-    this.email = email;
-  }
-
-  get email() {
-    return this.email;
-  }
-
-  set email(newEmail) {
-    this.email = newEmail;
-  }
-}
+const MIN_RATING = 8;
+const AUTHOR = 'Бернард Корнуэлл';
 // Пиши код ниже этой строки
-class Admin extends User {
-  static AccessLevel = { BASIC: 'basic', SUPERUSER: 'superuser' };
-}
-console.log(Admin.AccessLevel.BASIC);
+
+const topRatedBooks = books.filter(({rating}) => rating>=MIN_RATING);
+const booksByAuthor = books.filter(({ author}) => author === AUTHOR);
+console.log(topRatedBooks);
+console.log(booksByAuthor)

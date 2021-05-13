@@ -1,10 +1,15 @@
-const firstGroupScores = [64, 42, 93];
-const secondGroupScores = [89, 14, 51, 26];
-const thirdGroupScores = [29, 47, 18, 97, 81];
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
 // Пиши код ниже этой строки
-const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
-const bestScore =Math.max(...allScores);
-const worstScore = Math.min(...allScores);
-console.log(allScores);
-console.log(bestScore);
-console.log(worstScore);
+
+const anyElementInFirstIsEven = firstArray.some(value=>(value%2===0));
+const anyElementInFirstIsOdd = firstArray.some(value=>!(value%2===0));
+
+const anyElementInSecondIsEven = secondArray.some(value=>(value%2===0));
+const anyElementInSecondIsOdd = secondArray.some(value=>!(value%2===0));
+
+const anyElementInThirdIsEven = thirdArray.some(value=>(value%2===0));
+const anyElementInThirdIsOdd = thirdArray.some(value=>!(value%2===0));
+console.log(anyElementInFirstIsEven);
+console.log(anyElementInFirstIsOdd );

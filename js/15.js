@@ -1,34 +1,7 @@
-class Car {
-  // Пиши код ниже этой строки 
-  static MAX_PRICE = 50000;
-  
-  #price;
- 
-  constructor({ price }) {
-    this.#price = price;
-  }
+const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// Пиши код ниже этой строки
 
-  get price() {
-    return this.#price;
-  }
-
-  set price(newPrice) {
-    if (newPrice <= Car.MAX_PRICE) {
-      this.#price=newPrice;
-    }
-    // return newPrice;
-  }
-  // Пиши код выше этой строки
-}
-// console.log(this.MAX_PRICE);
-
-const audi = new Car({price: 35000});
-console.log(audi.price); // 35000
- 
-
-audi.price = 49000;
-console.log(audi.price); // 49000
-
-audi.price = 51000;
-console.log(audi.price); // 49000
-// console.dir(Car);
+const evenNumbers = numbers.filter(number=>(number%2===0));
+const oddNumbers = numbers.filter(number =>!(number % 2===0));
+console.log(evenNumbers);
+console.log(oddNumbers);
