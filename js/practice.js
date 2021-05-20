@@ -1,18 +1,14 @@
-//  'use strict';
+const target = 3;
+let sum = 0;
 
-const animal = { eats: true };
-const dog = Object.create(animal);
-console.log("🚀 ~ file: practice.js ~ line 5 ~ dog", dog)
-dog.barks = true;
+for (let i = 0; i <= target; i += 1) {
+    // console.log(i);
+  sum += i;
+}
 
-console.log(barks); // true
-console.log(dog.eats); // true
+// console.log(sum);
+const max = 10;
 
-
-
-
-
-
-
-
-
+for (let i = 0; i < max; i += 1) {
+  console.log(`${max} % ${i} = `, max % i);
+}

@@ -2,8 +2,10 @@ function changeEven(numbers, value) {
     // Пиши код ниже этой строки
   const newArray = [];
   numbers.forEach(number => {
-    if (number % 2 === 0){
-    newArray.push(number+value);}
+    if (number % 2 === 0) {
+      newArray.push(number + value);
+    }
+  
     else { newArray.push(number);}})
     return newArray;
   

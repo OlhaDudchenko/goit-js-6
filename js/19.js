@@ -77,4 +77,11 @@ const getUsersWithAge = (users, minAge, maxAge) => {
 
 };
 // Пиши код выше этой строки
-console.log(getUsersWithAge(users,20,30));
+console.log(getUsersWithAge(users, 20, 30));
+
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//   return users.filter(({age})=>(age>=minAge && age<=maxAge));
+
+// };
+// Пиши код выше этой строки
+// console.log(getUsersWithAge(users,20,30));
