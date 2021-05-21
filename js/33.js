@@ -1,4 +1,4 @@
-const users=[
+const users = [
   {
     name: 'Moore Hensley',
     email: 'moorehensley@indexia.com',
@@ -64,11 +64,12 @@ const users=[
   }
 ]
 
-// Пиши код ниже этой строки
+
 const getTotalFriendCount = users => {
-  
+
   return users.reduce((total, user) => total + user.friends.length, 0)
- console.log(users.friends.length);
+  console.log(users.friends.length);
 };
-// Пиши код выше этой строки
-console.log(getTotalFriendCount(users));
+
+
+
