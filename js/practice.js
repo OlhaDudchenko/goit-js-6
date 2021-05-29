@@ -1,14 +1,15 @@
-const target = 3;
-let sum = 0;
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 8.14 },
+  { title: 'Сны В Ведьмином Доме', author: 'Говард Лавкрафт', rating: 8.67 }
+];
+const MIN_BOOK_RATING = 8;
+// Пиши код ниже этой строки
 
-for (let i = 0; i <= target; i += 1) {
-    // console.log(i);
-  sum += i;
-}
+const names = books.filter(book => book.rating > MIN_BOOK_RATING)
+  .map(book => book.author)
+  .sort((a, b) => a.localeCompare(b));
 
-// console.log(sum);
-const max = 10;
-
-for (let i = 0; i < max; i += 1) {
-  console.log(`${max} % ${i} = `, max % i);
-}
+console.log(names);

@@ -11,6 +11,19 @@ function changeEven(numbers, value) {
   
     }
     // Пиши код выше этой строки
+function changeEven(numbers, value) {
+    // Пиши код ниже этой строки
+  
+  numbers.forEach(number => {
+      
+    newArray.push(number % 2 === 0 ?number+value:number);
+  })
+    
+  return newArray;
+    
+  
+    }
+    
 const numbers = [1, 2, 3, 4, 5];
 
 console.log(changeEven([1, 2, 3, 4, 5], 10));
