@@ -67,5 +67,7 @@ const users=[
 const getNamesSortedByFriendCount = users => {
     return [...users].sort((firstUser, secondUser) => firstUser.friends.length - secondUser.friends.length).map(user => user.name);
 };
+
 // Пиши код выше этой строки
 console.log(getNamesSortedByFriendCount(users));
+// const getNamesSortedByFriendCount = users => { return [...users].sort((a, b) => a.friends.length - b.friends.length).map(user => user.name) };
